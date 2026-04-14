@@ -1,0 +1,14 @@
+Preguntas de desarrollo:
+
+1. ¿Qué hace la anotación @BeforeEach?
+   Respuesta: La anotación @BeforeEach en JUnit 5 indica que el método anotado se ejecutará antes de cada método de prueba (@Test) en la clase. Se utiliza comúnmente para configurar el estado inicial necesario para las pruebas, como inicializar objetos, configurar conexiones o preparar datos.
+
+2. ¿Para qué sirve assertTrue?
+   Respuesta: assertTrue es un método de aserción en JUnit que verifica si una condición booleana es verdadera. Si la condición es falsa, la prueba falla. Se utiliza para validar que ciertas condiciones se cumplan durante la ejecución de la prueba, como comprobar que un elemento esté visible o que una URL contenga cierto texto.
+
+3. ¿Qué diferencia hay entre findElement() y findElements()?
+   Respuesta: findElement() devuelve el primer elemento WebElement que coincide con el localizador especificado. Si no se encuentra ningún elemento, lanza una NoSuchElementException.
+   findElements() devuelve una lista (List<WebElement>) de todos los elementos que coinciden con el localizador. Si no se encuentra ninguno, devuelve una lista vacía. findElement() es útil cuando se espera un único elemento, mientras que findElements() se usa cuando se esperan múltiples elementos o para verificar la presencia de elementos.
+
+4. ¿Por qué utilizamos una clase LoginPage en lugar de escribir todo en el test?
+   Respuesta: Utilizar una clase como LoginPage sigue el patrón Page Object Model (POM), que separa la lógica de interacción con la página web de la lógica de las pruebas. Esto hace el código más mantenible, reutilizable y legible. Los cambios en la estructura de la página solo requieren modificaciones en la clase Page Object, no en múltiples tests. Además, encapsula las operaciones de la página, facilitando la escritura de pruebas más limpias y enfocadas en el comportamiento esperado.
